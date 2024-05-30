@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteBazaar</title>
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+    <link rel="shortcut icon" href="image/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <section>
+        <nav>
+            <div class="logo">
+                <h1>ByteBazaar<span></span></h1>
+            </div>
+
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Products">Products</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Review">Review</a></li>
+                <li><a href="#Servises">Servises</a></li>
+            </ul>
+
+            <div class="icons">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <a href="{% url 'login' %}">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+
+        </nav>
+        <div class="main" id="Home">
+            <div class="main_content">
+                <div class="main_text">
+                    <h1>Electronics<br><span>Collection</span></h1>
+                    <p>
+                        Discover ByteBazzar, your one-stop shop for electronics! Browse our range: laptops, smartphones,
+                        tablets, and accessories. Enjoy top deals and best sellers for unbeatable value. Stay updated
+                        with new arrivals and special offers. Join our community, subscribe to our newsletter, and 
+                        shop confidently with ByteBazzar.
+                    </p>
+                </div>
+                <div class="main_image">
+                    <img src="{% static 'image/pic_1_-removebg-preview.png' %}">
+                </div>
+            </div>
+            <div class="social_icon">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="button">
+                <a href="#">SHOP NOW</a>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!--Products-->
+
+    <div class="products" id="Products">
+        <h1>Products</h1>
+
+        <div class="box">
+            <div class="card">
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+
+                <div class="image">
+                    <img src="{% static 'image/pic(1).png'%}">
+                </div>
+
+                <div class="products_text">
+                    <h2>OnePlus</h2>
+                    <p>
+                        OnePlus Nord N30 5G: Unlocked, 6.7" LCD, 108MP Camera, Chromatic Gray.
+                    </p>
+                    <h3>$299.19</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+
+                <div class="image">
+                    <img src="{% static 'image/pic(2).png'%}">
+                </div>
+
+                <div class="products_text">
+                    <h2>POCO M6</h2>
+                    <p>
+                        Xiaomi Poco X6 PRO 5G: Unlocked, 256GB, 64MP Triple Camera, Black.
+                    </p>
+                    <h3>$317.97</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+
+                <div class="image">
+                    <img src="{% static 'image/pic(3).png'%}">
+                </div>
+
+                <div class="products_text">
+                    <h2>Vivo T3 5G</h2>
+                    <p>
+                        Vivo T3 5G: Advanced smartphone with lightning-fast connectivity.
+                    </p>
+                    <h3>$285</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+
+                <div class="image">
+                    <img src="{% static 'image/pic(13).png'%}">
+                </div>
+
+                <div class="products_text">
+                    <h2>OnePlus</h2>
+                    <p>
+                        US Factory Unlocked 12R: 16GB RAM, 256GB, Dual-SIM, 50MP Camera.
+                    </p>
+                    <h3>$529</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+
+                <div class="image">
+                    <img src="{% static 'image/pic(10).png'%}">
+                </div>
+
+                <div class="products_text">
+                    <h2>HP</h2>
+                    <p>
+                        HP Envy x360 2-in-1 Laptop: 15.6" Touchscreen, Core i7, 32GB RAM.
+                    </p>
+                    <h3>$150.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+
+                <div class="image">
+                    <img src="{% static 'image/pic(11).png'%}">
+                </div>
+
+                <div class="products_text">
+                    <h2>Vectus</h2>
+                    <p>
+                        Vectus Laptop: Standard 15.6" Screen, Intel Core i7, 32GB RAM.
+                    </p>
+                    <h3>$499.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+
+                <div class="image">
+                    <img src="{% static 'image/pic(14).png'%}">
+                </div>
+
+                <div class="products_text">
+                    <h2>Vectus</h2>
+                    <p>
+                        Vectus Gaming Laptop: 15.6" Display, Intel Core i7, 32GB RAM.
+                    </p>
+                    <h3>$585.55</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+
+                <div class="image">
+                    <img src="{% static 'image/pic(9).png'%}">
+                </div>
+
+                <div class="products_text">
+                    <h2>Acer</h2>
+                    <p>
+                        Acer Laptop: 15.6" Display, Intel Core i7, 32GB RAM.
+                    </p>
+                    <h3>$150.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!--About-->
+
+    <div class="about" id="About">
+        
+        <h1>Web<span>About</span></h1>
+
+        <div class="about_main">
+            <div class="about_image">
+                <div class="about_small_image">
+                    <img src="{% static 'image/pic(24).jpeg'%}" onclick="functio(this)">
+                    <img src="{% static 'image/pic(23).jpeg'%}" onclick="functio(this)">
+                    <img src="{% static 'image/pic(22).jpeg'%}" onclick="functio(this)">
+                    <img src="{% static 'image/pic(21).jpeg'%}" onclick="functio(this)">
+                </div>
+
+                <div class="image_contaner">
+                    <img src="{% static 'image/pic(20).png'%}" id="imagebox">
+                </div>
+
+            </div>
+
+            <div class="about_text">
+                <p>
+                    Welcome to ByteBazzar, the epitome of innovation and excellence in the dynamic electronics industry. With an unwavering commitment to quality and customer satisfaction, we continually strive to redefine the market landscape by introducing cutting-edge products and providing exceptional service on a global scale. From our modest beginnings, fueled by a shared vision of transformative impact, ByteBazzar has evolved into a trailblazer, leading the charge towards a future defined by technological advancement and customer-centric solutions. Guided by our dedicated team of visionaries, each interaction with ByteBazzar reflects our unwavering dedication to excellence, ensuring that every individual receives personalized attention and support. As we embrace the ever-changing dynamics of the industry, our mission remains steadfast: to redefine excellence and catalyze positive change within society. Join us on this exhilarating journey of innovation and discovery. Explore our diverse range of meticulously curated products and services, designed to meet the evolving needs of our global community. Reach out to us today to explore potential collaborations and partnership opportunities.
+                </p>
+            </div>
+
+        </div>
+
+        <a href="#" class="about_btn">Shop Now</a>
+
+        <script>
+            function functio(small){
+                var full = document.getElementById("imagebox")
+                full.src = small.src
+            }
+        </script>
+        
+    </div>
+
+
+
+    <!--Review-->
+
+    <div class="review" id="Review">
+        <h1>Customer's<span>review</span></h1>
+        
+        <div class="review_box">
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="{% static 'image/self.jpeg'%}">
+                        </div>
+
+                        <div class="name">
+                            <strong>Kundan Burnwal</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        Exceptional service, swift delivery, and top-notch products. The website offers a seamless 
+                        shopping experience with a wide range of electronics, competitive prices, and excellent customer support.
+                        Highly recommended!
+                    </p>
+                </div>
+            </div>   
+
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="{% static 'image/papaji.jpeg'%}">
+                        </div>
+
+                        <div class="name">
+                            <strong>B.P. Burnwal</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        Seamless shopping with swift delivery and top-notch products. User-friendly interface, extensive 
+                        selection, hassle-free checkout, and lightning-fast shipping. Reliable, trustworthy, and consistently 
+                        excellent service. Highly recommended for electronic purchases
+                    </p>
+                </div>
+            </div>   
+
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="{% static 'image/Abhinab.jpeg'%}">
+                        </div>
+
+                        <div class="name">
+                            <strong>Abhinab Dey</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        Great prices, fast delivery, and excellent customer support. The website is easy to navigate with
+                        a wide range of high-quality electronics. A fantastic shopping experience every time. Highly 
+                        recommended! Will shop again!
+                    </p>
+                </div>
+            </div>   
+
+        </div>
+
+        <div class="review_box">
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="{% static 'image/arvi.jpeg'%}">
+                        </div>
+
+                        <div class="name">
+                            <strong>Arvi Aarya</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        Fantastic selection, competitive prices, and prompt shipping. The website is easy to navigate,
+                        and customer service is always helpful. A reliable choice for all your electronic needs. Highly
+                        recommend! Will definitely return!
+                    </p>
+                </div>
+            </div>   
+
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="{% static 'image/karn.jpeg'%}">
+                        </div>
+
+                        <div class="name">
+                            <strong>Karan</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        Superb website with great deals and fast shipping. Easy to use and excellent customer support. 
+                        Always a positive shopping experience with a wide range of quality electronics. Highly recommend! 
+                        Will shop here again! Truly unbeatable!
+                    </p>
+                </div>
+            </div>   
+
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="{% static 'image/kajal.jpeg'%}">
+                        </div>
+
+                        <div class="name">
+                            <strong>Kajal Kri.</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        ByteBazzar offers an excellent selection of electronics at competitive prices. The website is 
+                        user-friendly, and their customer service is responsive and helpful. Fast shipping and secure 
+                        payment options make for a seamless shopping experience.
+                    </p>
+                </div>
+            </div>   
+
+        </div>
+
+    </div>
+
+
+    <!--Services-->
+
+    <div class="services" id="Servises">
+        <h1>our<span>services</span></h1>
+
+        <div class="services_cards">
+            <div class="services_box">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+            </div>
+
+            <div class="services_box">
+                <i class="fa-solid fa-rotate-left"></i>
+                <h3>10 Days Replacement</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+            </div>
+
+            <div class="services_box">
+                <i class="fa-solid fa-headset"></i>
+                <h3>24 x 7 Support</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!--Login Form-->
+    
+    <div class="login_form">
+        <div class="left">
+            <img src="{% static 'image/pic(20).png' %}">
+        </div>
+
+        <div class="right">
+            <h1>Welcome Back!</h1>
+
+            <form method="post">
+                {% csrf_token %}
+                <p>User Name</p>
+                <div class="user">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="username" placeholder="User Name" class="username" value="{{ form.username.value|default:'' }}">
+                    {% if form.username.errors %}
+                        <div class="error">{{ form.username.errors }}</div>
+                    {% endif %}
+                </div>
+                <p class="passworg_tag">Password</p>
+                <div class="password">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password">
+
+                    {% if form.password.errors %}
+                        <div class="error">{{ form.password.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <p class="forget">Forget Password ?</p>
+
+                <button type="submit">Login</button>
+
+                <div class="new_user">
+                    <a href={% url 'login' %}>New User</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!--Footer-->
+
+    <footer>
+        <div class="footer_main">
+            <div class="tag">
+                <h1>Contact</h1>
+                <a href="#"><i class="fa-solid fa-house"></i>A-1/Bangalore/India</a>
+                <a href="#"><i class="fa-solid fa-phone"></i>+919501234567</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i>ByteBazaar@gmail.com</a>
+            </div>
+
+            <div class="tag">
+                <h1>Get Help</h1>
+                <a href="#" class="center">FAQ</a>
+                <a href="#" class="center">Shipping</a>
+                <a href="#" class="center">Returns</a>
+                <a href="#" class="center">Payment Options</a>
+            </div>
+
+            <div class="tag">
+                <h1>Our Stores</h1>
+                <a href="#" class="center">Bangalore</a>
+                <a href="#" class="center">Chennai</a>
+                <a href="#" class="center">Mumbai</a>
+                <a href="#" class="center">New Delhi</a>
+            </div>
+
+            <div class="tag">
+                <h1>Follw Us</h1>
+                <div class="social_link">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>                    
+                </div>
+            </div>
+
+            <div class="tag">
+                <h1>Newsletter</h1>
+                <div class="search_bar">
+                    <input type="text" placeholder="You email id here">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    
+</body>
+</html>

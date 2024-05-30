@@ -1,0 +1,401 @@
+
+            <!-- Displaying messages -->
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+ 
+
+  /* background: #1b2b2c; */
+  /* background: whitesmoke; */
+ 
+<img src="{% static 'image/person-working.svg' %}" class="left-login-image" alt="Pessoa trabalhando">
+ 
+
+                        Superb website with great deals and fast shipping. Easy to use and excellent customer support. 
+                        Always a positive shopping experience with a wide range of quality electronics. Highly recommend! 
+                        Will shop here again!
+ 
+Superb website with great deals and fast shipping. Easy to use and excellent customer support.
+                        Always a positive shopping experience with a wide range of quality electronics. Highly recommend!
+ 
+
+                        Fantastic selection, competitive prices, and prompt shipping. The website is easy to navigate, 
+                        and customer service is always helpful. A reliable choice for all your electronic needs. 
+                        Highly recommend!
+ 
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
+                        architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
+                        repellat numquam atque dolores!
+ 
+
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
+                        architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
+                        repellat numquam atque dolores!
+ 
+
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
+                        architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
+                        repellat numquam atque dolores!
+ 
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
+                        architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
+                        repellat numquam atque dolores!
+ 
+background: white;
+ 
+
+            # If authentication fails, render the login page again with an error message
+ 
+            # If authentication successful, log the user in and redirect to home page
+ 
+
+        # Check if the username and password match a user in the database
+ 
+
+# def signin(request):
+#     if request.method == 'POST':
+#         username = request.POST.get('username')
+#         password = request.POST.get('password')
+#         user = authenticate(username=username, password=password)
+#         if user is not None:
+#             auth_login(request, user)
+#             return redirect('home')
+#         else:
+#             messages.error(request, 'Invalid username or password.')
+#     else:
+#         form = LoginForm()
+#         return render(request, 'testapp/login.html', {'form': form})
+
+
+ 
+
+            # Save the user instance without committing to the database
+ 
+                    <!-- Django form errors for password -->
+ 
+ <!-- Django form errors for username -->
+ 
+ # Set the password using set_password method
+            user.set_password(form.cleaned_data['password'])
+ 
+# Save the user object with the hashed password
+ 
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Sign Up</title>
+</head>
+<body>
+  <div class="main-login">
+    <div class="left-login">
+        <h1>ByteBazzar</h1>
+        <img src="{% static 'image/person-working.svg' %}" class="left-login-image" alt="Pessoa trabalhando">
+    </div>
+    <div class="right-login">
+      <div class="card-login">
+        <h1>Sign Up</h1>
+        <form method="post">
+          {% csrf_token %}
+          <div class="textfield">
+            <label for="{{ form.username.id_for_label }}">Username</label>
+            {{ form.username }}
+          </div>
+          <div class="textfield">
+            <label for="{{ form.first_name.id_for_label }}">First Name</label>
+            {{ form.first_name }}
+          </div>
+          <div class="textfield">
+            <label for="{{ form.last_name.id_for_label }}">Last Name</label>
+            {{ form.last_name }}
+          </div>
+          <div class="textfield">
+            <label for="{{ form.email.id_for_label }}">Email</label>
+            {{ form.email }}
+          </div>
+          <div class="textfield">
+            <label for="{{ form.password.id_for_label }}">Password</label>
+            {{ form.password }}
+          </div>
+          <button type="submit" class="btn-login">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+ 
+  # Hash the password before saving
+ 
+ # Redirect to the 'index' view or another appropriate URL name
+ 
+<div class="icons">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <a href="template/testapp/login.html">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+ 
+from django.contrib import admin
+from django.urls import path
+from testapp import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',views.index),
+    path('template/testapp/login.html',views.login),
+    path('template/testapp/home.html',views.index),
+    # path('template/testapp/home.html',views.signin)
+]
+ 
+from .forms import UserForm
+
+# Create your views here.
+def index(request):
+    return render(request,'testapp/home.html')
+
+def login(request):
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.set_password(form.cleaned_data['password'])
+            user.save()
+            messages.success(request, 'Account created successfully!')
+            return redirect('testapp/home.html')
+    else:
+        form = UserForm()
+    return render(request, 'testapp/login.html', {'form': form})
+
+ 
+from django import forms
+from .models import User
+from django.contrib.auth.models import User
+
+class UserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['username', 'first_name', 'last_name', 'email', 'password']
+        widgets = {
+            'password': forms.PasswordInput(),
+        }
+
+ 
+   <p>welcome {{request.user}}</p>
+ 
+(method, url, body=None, headers={})
+ 
+  else:
+            messages.error(request, 'Please correct the error below.')
+ 
+form = LoginForm(request.POST)
+        if form.is_valid():
+ 
+testapp/
+ 
+testapp/
+ 
+testapp/signup.html
+ 
+20.99
+ 
+<!-- Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical 
+                    Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at 
+                    Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a 
+                    Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the 
+                    undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" 
+                    (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, 
+                    very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes 
+                    from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below 
+                    for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also 
+                    reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. -->
+ 
+ Together, let's unleash the boundless potential of technology and ignite a revolution without boundaries. Welcome to ByteBazzar, where innovation knows no limits.
+ 
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has 
+                        been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
+                        a galley of type and scrambled it to make a type specimen book. It has survived not only 
+                        five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+ 
+login
+ 
+from django.shortcuts import render, redirect
+from .forms import UserForm
+ 
+def login(request):
+    return render(request,'testapp/login.html')
+ 
+success_url
+ 
+# Redirect to a success page or home
+ 
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static '/css/style.css' %}">
+  <title>Login</title>
+</head>
+<body>
+  <div class="main-login">
+    <div class="left-login">
+        <h1>ByteBazzar</h1>
+      <img src="{% static '/image/person-working.svg' %}" class="left-login-image" alt="Pessoa trabalhando">
+    </div>
+    <div class="right-login">
+      <div class="card-login">
+        <h1>Sign Up</h1>
+        <div class="textfield">
+          <label for="usuario">Username</label>
+          <input type="text" name="usuario" placeholder="Username">
+        </div>
+        <div class="textfield">
+          <label for="usuario">First Name</label>
+          <input type="text" name="usuario" placeholder="First Name">
+        </div>
+        <div class="textfield">
+          <label for="usuario">Last Name</label>
+          <input type="text" name="usuario" placeholder="Last Name">
+        </div>
+        <div class="textfield">
+          <label for="usuario">Email</label>
+          <input type="text" name="usuario" placeholder="Email">
+        </div>
+        <div class="textfield">
+          <label for="password">Password</label>
+          <input type="password" name="password" placeholder="password">
+        </div>
+        <button class="btn-login">Login</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+ 
+twitter.png
+ 
+               <a href="\testapp\login.html">
+ 
+</a>
+ 
+C:\Users\Kundan\Downloads\ecommerce\ByteBazaar\ByteBazzar\template
+ 
+LOGIN
+ 
+lá novamente!<br>Acesse sua conta no 
+ 
+<div class="textfield">
+          <label for="usuario">Phone</label>
+          <input type="text" name="usuario" placeholder="Phone">
+        </div>
+ 
+Last Name
+ 
+Last Name
+ 
+password
+ 
+Password
+ 
+C:\Users\Kundan\Downloads\ecommerce\ByteBazaar\ByteBazzar\template
+ 
+     
+    </div>
+ 
+      <h1>Faça login<br>E entre para o nosso time</h1>
+ 
+<i class="fa-solid fa-star-half-stroke"></i>
+ 
+       <India></India>
+ 
+123/Colombo/Sri Lanka
+ 
+<i class="fa-solid fa-star-half-stroke"></i>
+ 
+<i class="fa-solid fa-star-half-stroke"></i>
+ 
+Charith Aruna
+ 
+/man_dp3.jpg
+ 
+image/gir_dp2.jpg
+ 
+aveeshadurang Vii
+ 
+/gir_dp3.jpg
+ 
+Senuda Dilwan
+ 
+image/man_dp2.jpg
+ 
+ayuru Tharanga
+ 
+/man_dp1.jpg
+ 
+Ranidi Lochana
+ 
+/girl_dp1.jpg
+ 
+
+    background-image: url(image/loging_bg.png);
+ 
+
+    background-image: url(image/bg1.png);
+ 
+/logshoes.png
+ 
+red_shoes4.png
+ 
+/red_shoes3.png
+ 
+/red_shoes2.png
+ 
+red_shoes1.png
+ 
+red_shoes1.png
+ 
+/shoes7.png
+ 
+/shoes.png
+ 
+hoes6.png
+ 
+NIKE
+ 
+/shoes5.png
+ 
+NIKE
+ 
+mage/shoes4.png
+ 
+image/shoes3.png
+ 
+NIKE
+ 
+NIKE
+ 
+image/shoes2.png
+ 
+image/shoes1.png
+ 
+Apple
+ 
+jpg
+ 
+image/shoes.png
+ 
+NIKE
+ 
+Shoe
+ 

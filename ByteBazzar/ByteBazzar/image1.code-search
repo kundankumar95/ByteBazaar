@@ -1,0 +1,87 @@
+# Query: image1
+# ContextLines: 1
+
+
+24 results - 1 file
+
+index.html:
+   47                  <div class="main_image">
+   48:                     <img src="image1/pic_1_-removebg-preview.png">
+   49                  </div>
+
+   79                  <div class="image">
+   80:                     <img src="image1/pic(1).png">
+   81                  </div>
+
+  108                  <div class="image">
+  109:                     <img src="image1/pic(2).png">
+  110                  </div>
+
+  137                  <div class="image">
+  138:                     <img src="image1/pic(3).png">
+  139                  </div>
+
+  166                  <div class="image">
+  167:                     <img src="image1/pic(13).png">
+  168                  </div>
+
+  195                  <div class="image">
+  196:                     <img src="image1/pic(10).png">
+  197                  </div>
+
+  224                  <div class="image">
+  225:                     <img src="image1/pic(11).png">
+  226                  </div>
+
+  253                  <div class="image">
+  254:                     <img src="image1/pic(14).png">
+  255                  </div>
+
+  282                  <div class="image">
+  283:                     <img src="image1/pic(9).png">
+  284                  </div>
+
+  317                  <div class="about_small_image">
+  318:                     <img src="image1/pic(24).jpeg" onclick="functio(this)">
+  319:                     <img src="image1/pic(23).jpeg" onclick="functio(this)">
+  320:                     <img src="image1/pic(22).jpeg" onclick="functio(this)">
+  321:                     <img src="image1/pic(21).jpeg" onclick="functio(this)">
+  322                  </div>
+
+  324                  <div class="image_contaner">
+  325:                     <img src="image1/pic(20).png" id="imagebox">
+  326                  </div>
+
+  370                          <div class="profile_image">
+  371:                             <img src="image1/self.jpeg">
+  372                          </div>
+
+  401                          <div class="profile_image">
+  402:                             <img src="image1/papaji.jpeg">
+  403                          </div>
+
+  432                          <div class="profile_image">
+  433:                             <img src="image1/Abhinab.jpeg">
+  434                          </div>
+
+  466                          <div class="profile_image">
+  467:                             <img src="image1/arvi.jpeg">
+  468                          </div>
+
+  497                          <div class="profile_image">
+  498:                             <img src="image1/karn.jpeg">
+  499                          </div>
+
+  528                          <div class="profile_image">
+  529:                             <img src="image1/kajal.jpeg">
+  530                          </div>
+
+  598          <div class="left">
+  599:             <img src="image1/pic(20).png">
+  600          </div>
+
+  621                  <div class="loging_icon">
+  622:                     <a href="#"><img src="image1/google.png"></a>
+  623:                     <a href="#"><img src="image1/facebook.png"></a>
+  624:                     <a href="#"><img src="image1/twitter.png"></a>
+  625                  </div>
